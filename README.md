@@ -26,3 +26,18 @@
 ### 默认的管理账号
 - 账号admin密码admin
     - [db.module.ts](./nest_js/src/db/db.module.ts) 在首次启动项目时添加到数据库
+    
+### 开发前的配置
+配置好两个docker-compose文件里数据库名称、用户名、密码等字符串
+
+
+
+### 开发模式启动步骤
+- 启动Nginx
+    `sh nginx_dev.sh`
+- 启动Postgres和Redis
+    `docker-compose up -d -f docker-compose-dev.yml`
+- 启动Nest.js
+    `cd ./nust_js && npm run start:dev`
+- 启动Nuxt.js
+    `cd ./next_js && npm run dev`
