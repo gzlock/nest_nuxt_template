@@ -43,6 +43,7 @@
     "@types/express-session": "^1.17.0",
     "@types/lodash": "^4.14.162",
     "@types/ioredis": "^4.17.5",
+    "@types/redis": "^2.8.28",
     "@nestjs/cli": "^7.0.0",
     "@nestjs/schematics": "^7.0.0",
     "@nestjs/testing": "^7.0.0",

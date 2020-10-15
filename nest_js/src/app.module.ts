@@ -13,6 +13,5 @@ import { RedisModule } from 'nestjs-redis'
     DbModule,
     AdminModule,
   ],
-
 })
 export class AppModule {}
