@@ -1,0 +1,4 @@
+db_data
+.idea
+# Project exclude paths
+/nest_js/test.js

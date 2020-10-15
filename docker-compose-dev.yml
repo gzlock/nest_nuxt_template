@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: 账号名(数据库名)
+      POSTGRES_PASSWORD: 密码
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db_data/:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    command: redis-server --requirepass 密码
+    ports:
+      - 6379:6379
