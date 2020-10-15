@@ -3,6 +3,8 @@
 ### 包含
 - Nest.js
 - Nuxt.js
+    - Vue@2
+    - Ant Design of Vue(UI)
 - Docker
     - Postgres
     - Redis
