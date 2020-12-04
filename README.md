@@ -34,12 +34,32 @@
 
 
 
-### 开发模式启动步骤
+### 开发环境启动步骤
 - 启动Nginx
+
     `sh nginx_dev.sh`
+    
 - 启动Postgres和Redis
+
     `docker-compose up -d -f docker-compose-dev.yml`
+    
 - 启动Nest.js
+
     `cd ./nust_js && npm run start:dev`
+    
 - 启动Nuxt.js
+
     `cd ./next_js && npm run dev`
+    
+### 产生环境启动
+- 如果有文件变动需要构建docker镜像
+
+    ```
+    docker-compose build nest nuxt
+    docker-compose stop nest nuxt
+    ```
+    
+- 启动 或 重启 有变动的nest或nuxt服务
+
+    `docker-compose up -d`
+    
