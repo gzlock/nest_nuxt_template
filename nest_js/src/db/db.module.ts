@@ -8,12 +8,12 @@ import { SystemConfigKey } from '../type'
 @Module({
   imports: [
     SequelizeModule.forRoot({
-      host: '127.0.0.1', // docker环境要切换到 db
+      host: process.env.DB_HOST ?? '127.0.0.1',
       port: 5432,
       dialect: 'postgres',
-      database: '数据库名',
-      username: '用户',
-      password: '密码',
+      database: process.env.DB_USER ?? 'DB_USER',
+      username: process.env.DB_USER ?? 'DB_USER',
+      password: process.env.DB_PASSWORD ?? 'DB_PASSWORD',
       autoLoadModels: true,
       synchronize: true,
       retry: { max: 1 },

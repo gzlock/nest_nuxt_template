@@ -4,5 +4,7 @@ import { Controller, Get } from '@nestjs/common'
 export class HomeController {
   // /api/home
   @Get('/')
-  async index () {}
+  async index (): Promise<string> {
+    return 'admin home page'
+  }
 }

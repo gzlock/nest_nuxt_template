@@ -30,7 +30,7 @@
     - [db.module.ts](./nest_js/src/db/db.module.ts) 在首次启动初始化数据库时添加到数据库
     
 ### 开发前的配置
-配置好两个docker-compose文件里数据库名称、用户名、密码等字符串
+配置`docker-compose.yml`和`docker-compose-dev.yml`两个文件里**DB_HOST** *DB_USER* *DB_PASSWORD*
 
 
 

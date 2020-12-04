@@ -1,5 +1,4 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common'
-import { AdminModel } from '../../db/admin/admin.model'
 import lodash from 'lodash'
 
 export const Page = createParamDecorator(

@@ -1,3 +1,3 @@
-declare const enum SystemConfigKey {
+export declare const enum SystemConfigKey {
   init = 'init',
 }

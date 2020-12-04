@@ -4,8 +4,8 @@ services:
   db:
     image: postgres:alpine
     environment:
-      POSTGRES_USER: 账号名(数据库名)
-      POSTGRES_PASSWORD: 密码
+      POSTGRES_USER: DB_USER
+      POSTGRES_PASSWORD: DB_PASSWORD
     ports:
       - 5432:5432
     volumes:
@@ -13,6 +13,6 @@ services:
 
   redis:
     image: redis:alpine
-    command: redis-server --requirepass 密码
+    command: redis-server --requirepass REDIS_PASSWORD
     ports:
       - 6379:6379
