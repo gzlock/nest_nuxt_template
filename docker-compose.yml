@@ -4,8 +4,8 @@ services:
   db:
     image: postgres:alpine
     environment:
-      POSTGRES_USER: 账号名(数据库名)
-      POSTGRES_PASSWORD: 密码
+      POSTGRES_USER: DB_USER
+      POSTGRES_PASSWORD: DB_PASSWORD
     expose:
       - 5432
     volumes:
@@ -29,10 +29,11 @@ services:
     volumes:
       - ./public:/public
     environment:
-      - DB_HOST=db
-      - DB_USER=DB_USER
-      - DB_PASSWORD=DB_PASSWORD
-      - REDIS_URL='redis://:REDIS_PASSWORD@redis:6379/0'
+      - COOKIE_SECRET=COOKIE_SECRET # cookies密钥
+      - DB_HOST=db # 数据库地址
+      - DB_USER=DB_USER # 数据库用户
+      - DB_PASSWORD=DB_PASSWORD #数据库的用户密码
+      - REDIS_URL='redis://:REDIS_PASSWORD@redis:6379/0' #Redis的连接地址
 
   nuxt:
     build:

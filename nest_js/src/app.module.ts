@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common'
 import { DbModule } from './db/db.module'
 import { AdminModule } from './admin/admin.module'
-import { RedisModule } from './redis/redis.module'
+import { MyRedisModule } from './redis/my.redis.module'
 
 @Module({
   imports: [
     DbModule,
-    RedisModule,
+    MyRedisModule,
     AdminModule,
   ],
 })
