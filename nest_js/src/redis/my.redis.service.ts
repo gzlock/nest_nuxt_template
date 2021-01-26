@@ -22,24 +22,25 @@ export class MyRedisService {
 
   async get<T> (
     key: string,
-    defaultValue = null,
+    defaultValue: T = null,
   ): Promise<T> {
     const value = await this.client.get(key)
     if (value) {
       try {
         return JSON.parse(value)
       } catch (e) {
-        // @ts-ignore
-        return value
+        return value as any
       }
     }
     return defaultValue
   }
 
   async set (key: string, value: any): Promise<void> {
-    if (value != undefined || value != null)
-      await this.client.set(key, JSON.stringify(value))
-    else
+    if (value) {
+      await this.client.set(
+        key, JSON.stringify(value))
+    } else {
       await this.client.del(key)
+    }
   }
 }
