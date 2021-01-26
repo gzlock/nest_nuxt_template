@@ -3,10 +3,11 @@
 ### 包含
 - Nest.js
     - Sequelize@6
+    - Redis
 - Nuxt.js
     - Vue@2
     - Ant Design of Vue(UI)
-- Docker
+- Docker镜像
     - Node.js@alpine(Nest.js, Nuxt.js)
     - Postgres@alpine
     - Redis@alpine
@@ -15,14 +16,16 @@
 
 - /nest_js 服务器程序
 - /nuxt_js 网页界面
-- /nginx_config Nginx 配置文件
-- /db_data postgres
+- /config/nginx Nginx的配置文件
+- /config/redis redis的持久化存储配置文件
+- /db_data 存放PostgreSQL数据库数据的文件夹
+- /redis_data 存放Redis持久化存储数据的文件夹
 
 ### Nginx路径配置
-- / 前端(Nuxt.js)
-- /api 后端(Nest.js)
+- / 管理后台的前端(Nuxt.js)
+- /api 后端接口(Nest.js)
 
-### 前端验证是否已经登录的逻辑
+### Nuxt.js中验证是否已经登录的逻辑
 - [中间件Auth.ts](./nuxt_js/middleware/auth.ts)判断store.state.admin是否有值
     1. 如果有赋值，显示管理后台
     2. 如果没有赋值，显示登录表单
@@ -31,8 +34,12 @@
 - 账号admin密码admin
     - [db.module.ts](./nest_js/src/db/db.module.ts) 在首次启动初始化数据库时添加到数据库
     
-### 开发前的配置
-配置`docker-compose.yml`和`docker-compose-dev.yml`两个文件里**DB_HOST** *DB_USER* *DB_PASSWORD*
+### docker-compose.yaml中的环境变量说明
+- `docker-compose.yml`和`docker-compose-dev.yml`两个文件里都有一些环境变量
+- **DB_USER** **DB_PASSWORD** 数据库连接地址，数据库用户，数据库密码
+- **COOKIE_SECRET** 参与Cookies签名的盐
+- **REDIS_URL** Redis连接地址
+- **REDIS_PASSWORD** Redis连接密码
 
 
 
