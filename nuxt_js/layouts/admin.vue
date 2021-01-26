@@ -14,9 +14,5 @@
 
   export default {
     components: { LeftMenu },
-    async fetch ({ $axios, store }) {
-      const admin = await $axios.$get('/api/admin/')
-      store.commit('SET_ADMIN', admin)
-    },
   }
 </script>
