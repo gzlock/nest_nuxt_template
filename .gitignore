@@ -1,5 +1,6 @@
 db_data
+redis_data
 .idea
-# Project exclude paths
-/nest_js/test.js
-yarn.lock
+/nest_js/dist
+/nuxt_js/.nuxt
+*/yarn.lock
