@@ -2,6 +2,7 @@ version: "3"
 
 services:
   db:
+    container_name: postgres
     image: postgres:alpine
     environment:
       POSTGRES_USER: DB_USER
@@ -21,6 +22,7 @@ services:
       - 6379
 
   nest:
+    container_name: nest
     build:
       context: ./nest_js
       dockerfile: Dockerfile
@@ -39,6 +41,7 @@ services:
       - REDIS_URL='redis://:REDIS_PASSWORD@redis:6379/0' #Redis的连接地址
 
   nuxt:
+    container_name: nuxt
     build:
       context: ./nuxt_js
       dockerfile: Dockerfile
@@ -46,6 +49,7 @@ services:
       - 3000
 
   nginx:
+    container_name: nginx
     image: nginx:alpine
     volumes:
       - ./config/nginx/product.nginx:/etc/nginx/conf.d/product.nginx # 配置文件
