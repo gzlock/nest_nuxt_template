@@ -7,7 +7,7 @@ export class AdminMiddleware implements NestMiddleware {
 
   async use (req: Request, res: Response, next: () => void): Promise<any> {
     let admin: AdminModel
-    console.log('中间件', JSON.stringify(req.signedCookies, null, 4))
+    // console.log('中间件', JSON.stringify(req.signedCookies, null, 4))
     const adminId = req.signedCookies['admin']
     if (adminId) {
       admin = await AdminModel.scope('simple')
