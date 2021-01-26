@@ -8,4 +8,4 @@ fi
 echo $CURDIR
 
 nginx -s stop
-nginx -c $CURDIR/nginx_config/dev.nginx
+nginx -c $CURDIR/config/nginx/dev.nginx
