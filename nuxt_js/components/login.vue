@@ -43,7 +43,7 @@
         })
         if (!data) return
         await this.$axios.$post('/api/admin/login', data).then(() => {
-          // window.location.reload()
+          window.location.reload()
         }).catch((err) => {
           this.$message.error(err.response?.data?.message ?? '登录失败')
         })
