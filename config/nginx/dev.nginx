@@ -32,7 +32,7 @@ http {
     server
     {
         listen 80; # 监听端口
-        server_name a.com; # 域名
+        # server_name a.com; # 绑定域名
         client_body_buffer_size     100M;
         client_max_body_size        100M;
 

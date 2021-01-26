@@ -5,11 +5,11 @@
             :default-selected-keys="['/']"
             mode="inline"
             @click="handleClick">
-      <a-menu-item key="/">
+      <a-menu-item key="/admin">
         <a-icon type="home"/>
         <span>首页</span>
       </a-menu-item>
-      <a-menu-item key="/account">
+      <a-menu-item key="/admin/account">
         <a-icon type="team"/>
         <span>后台账号</span>
       </a-menu-item>

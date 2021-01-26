@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common'
 import { AdminModel } from '../db/admin/admin.model'
 import { MyRedisService } from '../redis/my.redis.service'
 
-@Controller('/')
+@Controller('/admin')
 export class ExampleController {
   constructor (private readonly myRedisService: MyRedisService) {}
 
@@ -20,7 +20,7 @@ export class ExampleController {
     const res: any[] = []
     res.push(await this.myRedisService.get('a'))
     await this.myRedisService.set('a', null)
-    res.push(await this.myRedisService.get('a', { defaultValue: 'no value' }))
+    res.push(await this.myRedisService.get('a', 'no value'))
 
     await this.myRedisService.set('b', { a: 1, b: '2' })
     res.push(await this.myRedisService.get('b'))

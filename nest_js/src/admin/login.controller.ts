@@ -9,7 +9,7 @@ import {
 import { AdminModel } from '../db/admin/admin.model'
 import { Request, Response } from 'express'
 
-@Controller('/login')
+@Controller('/admin/login')
 export class LoginController {
   // /api/login
   @Post('/')

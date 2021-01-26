@@ -19,6 +19,8 @@ import { MyRedisModule } from '../redis/my.redis.module'
 })
 export class AdminModule implements NestModule {
   configure (consumer: MiddlewareConsumer): any {
-    consumer.apply(AdminMiddleware).exclude('/login').forRoutes('/')
+    consumer.apply(AdminMiddleware)
+      .exclude('/admin/login')
+      .forRoutes('/admin')
   }
 }

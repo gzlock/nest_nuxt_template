@@ -1,22 +1,7 @@
 <template>
-  <a-layout id="components-layout-demo-side" style="min-height: 100vh">
-    <left-menu></left-menu>
-    <a-layout>
-      <a-layout-content style="margin: 16px 16px 0 16px">
-        <Nuxt/>
-      </a-layout-content>
-    </a-layout>
-  </a-layout>
+  <Nuxt/>
 </template>
 
 <script>
-  import LeftMenu from '~/components/left-menu'
-
-  export default {
-    components: { LeftMenu },
-    async fetch ({ $axios, store }) {
-      const admin = await $axios.$get('/api/')
-      store.commit('SET_ADMIN', admin)
-    },
-  }
+  export default {}
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <a-card class="login" title="请登录">
+    <a-card class="login" title="登录管理后台">
       <a-form :form="form" @submit="submit">
         <a-form-item label="账号">
           <a-input
@@ -42,8 +42,8 @@
           })
         })
         if (!data) return
-        await this.$axios.$post('/api/login', data).then(() => {
-          window.location.reload()
+        await this.$axios.$post('/api/admin/login', data).then(() => {
+          // window.location.reload()
         }).catch((err) => {
           this.$message.error(err.response?.data?.message ?? '登录失败')
         })
@@ -59,6 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #666;
 
 
     .login {
