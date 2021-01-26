@@ -6,9 +6,15 @@ WORKDIR /nuxt
 
 COPY . /nuxt
 
-RUN npm config set registry http://mirrors.cloud.tencent.com/npm/
+RUN rm -rf ./node_modules
 
-RUN npm install
+RUN rm -rf ./dist
+
+RUN rm -f ./yarn.lock
+
+RUN yarn config set registry "http://mirrors.cloud.tencent.com/npm/"
+
+RUN yarn install
 
 RUN npm run build
 
