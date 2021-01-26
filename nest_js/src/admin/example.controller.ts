@@ -8,7 +8,7 @@ export class ExampleController {
 
   // db query
   @Get('db')
-  async db (): Promise<AdminModel[]> {
+  async db (): Promise<any> {
     // return {count:1, rows:[...]}
     return AdminModel.scope('simple').findAndCountAll()
   }

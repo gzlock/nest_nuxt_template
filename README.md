@@ -2,12 +2,15 @@
 
 ### 包含
 - Nest.js
+    - Sequelize@6
 - Nuxt.js
     - Vue@2
     - Ant Design of Vue(UI)
 - Docker
-    - Postgres
-    - Redis
+    - Node.js@12(Nest.js)
+    - Node.js@alpine(Nuxt.js)
+    - Postgres@alpine
+    - Redis@alpine
 
 ### 文件夹介绍
 

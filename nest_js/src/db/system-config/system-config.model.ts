@@ -8,7 +8,7 @@ import {
 } from 'sequelize-typescript'
 
 @Table({ timestamps: false })
-export class SystemConfigModel extends Model<SystemConfigModel> {
+export class SystemConfigModel extends Model {
   @Index('key')
   @PrimaryKey
   @Column

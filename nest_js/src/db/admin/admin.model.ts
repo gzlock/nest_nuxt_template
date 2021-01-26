@@ -7,7 +7,7 @@ import { AllowNull, Column, Model, Table } from 'sequelize-typescript'
     },
   },
 })
-export class AdminModel extends Model<AdminModel> {
+export class AdminModel extends Model {
 
   @AllowNull(false)
   @Column({ comment: '管理员账号' })

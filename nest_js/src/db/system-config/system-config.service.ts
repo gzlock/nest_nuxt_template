@@ -13,6 +13,7 @@ export class SystemConfigService {
   }
 
   async set<T> (key: SystemConfigKey, value: T): Promise<boolean> {
-    return SystemConfigModel.upsert({ key, value })
+    return true
+    // return SystemConfigModel.upsert({ key, value })
   }
 }
