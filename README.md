@@ -7,8 +7,7 @@
     - Vue@2
     - Ant Design of Vue(UI)
 - Docker
-    - Node.js@12(Nest.js)
-    - Node.js@alpine(Nuxt.js)
+    - Node.js@alpine(Nest.js, Nuxt.js)
     - Postgres@alpine
     - Redis@alpine
 
