@@ -1,6 +1,4 @@
-import { NuxtConfig } from '@nuxt/types'
-
-const config: NuxtConfig = {
+const config = {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
@@ -30,6 +28,7 @@ const config: NuxtConfig = {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/antd-ui',
+    '@/plugins/axios',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -46,7 +45,6 @@ const config: NuxtConfig = {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: '/',
     port: 80,
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)

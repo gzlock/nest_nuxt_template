@@ -61,14 +61,5 @@
     `$ cd ./next_js && npm run dev`
     
 ### 产生环境启动
-- 如果有文件变动需要构建Docker镜像
 
-    ```
-    $ docker-compose build nest nuxt
-    $ docker-compose stop nest nuxt
-    ```
-    
-- 启动 或 重启 有变动的nest或nuxt服务
-
-    `$ docker-compose up -d`
-    
+    `$ sh ./build.sh`
