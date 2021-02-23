@@ -62,4 +62,4 @@
     
 ### 产生环境启动
 
-    `$ sh ./build.sh`
+    $ sh ./build.sh
