@@ -62,4 +62,9 @@
     
 ### 产生环境启动
 
-    $ sh ./build.sh
+- 创建Docker镜像
+- 清理过期Docker镜像
+- 使用Docker-compose启动整个项目
+- 等一系列操作
+    
+    `$ sh ./build.sh`
