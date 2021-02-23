@@ -10,17 +10,17 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
-    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/axios": "^5.0.0",
     "axios": "^0.21.1",
-    "ant-design-vue": "^1.7.2",
-    "core-js": "^3.8.3",
+    "ant-design-vue": "^1.7.3",
+    "core-js": "^3.9.0",
     "js-cookie": "^2.2.1",
-    "sass": "^1.32.5",
-    "sass-loader": "^10.1.1",
-    "nuxt": "^2.14.12"
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "nuxt": "^2.15.2"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3"
+    "@nuxt/types": "^2.14.12",
+    "@nuxt/typescript-build": "^2.0.5"
   }
 }

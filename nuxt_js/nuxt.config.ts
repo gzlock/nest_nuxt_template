@@ -1,4 +1,6 @@
-const config = {
+import { NuxtConfig } from '@nuxt/types'
+
+export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
@@ -52,5 +54,4 @@ const config = {
   router: {
     middleware: 'auth',
   },
-}
-export default config
+} as NuxtConfig
