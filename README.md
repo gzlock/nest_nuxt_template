@@ -11,6 +11,7 @@
     - Node.js@alpine(Nest.js, Nuxt.js)
     - Postgres@alpine
     - Redis@alpine
+    - Nginx@alpine
 
 ### 文件夹介绍
 
